@@ -99,10 +99,10 @@ public class BitsoWebSocket extends Observable{
         setConnected(Boolean.TRUE);
     }
     
-    public void subscribeBitsoChannel(String channel){
+    public void subscribeBitsoChannel(String channel, String book){
         if(mConnected){
-            String frameMessage = "{ \"action\": \"subscribe\", \"book\": \"btc_mxn\", \"type\": \""
-                        + channel + "\" }";
+            String frameMessage = "{ \"action\": \"subscribe\", \"book\": \""+book+"\", \"type\": \""
+                    + channel + "\" }";
             mChannel.writeAndFlush(new TextWebSocketFrame(frameMessage));
         }else{
             String message = "Subscription to any channel is not possible while web socket is not connected";
