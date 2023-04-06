@@ -17,7 +17,6 @@ public class BitsoWebSocketObserver implements Observer{
         // Update message
         if(arg instanceof String){
             String messageReceived = ((String) arg);
-            System.out.println(messageReceived);
             mMessagesReceived.add(messageReceived);
         }
         
