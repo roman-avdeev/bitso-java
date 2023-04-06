@@ -42,7 +42,7 @@ public class BitsoWebSocketTest {
 
         bitsoWebSocket.openConnection();
         for (BitsoChannels bitsoChannel : bitsoChannels) {
-            bitsoWebSocket.subscribeBitsoChannel(bitsoChannel.toString());
+            bitsoWebSocket.subscribeBitsoChannel(bitsoChannel.toString(), "btc_mxn");
         }
 
         Thread.sleep(20000);
